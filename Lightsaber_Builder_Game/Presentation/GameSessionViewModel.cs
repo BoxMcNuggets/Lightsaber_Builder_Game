@@ -136,10 +136,6 @@ namespace Lightsaber_Builder_Game.Presentation
             //
             UpdateAccessibleLocations();
         }
-
-        /// <summary>
-        /// update the accessible locations for the list box
-        /// </summary>
         private void UpdateAccessibleLocations()
         {
             //
@@ -181,6 +177,11 @@ namespace Lightsaber_Builder_Game.Presentation
         {
             return DateTime.Now - _gameStartTime;
         }
+
+        #endregion
+
+        #region Movement
+
 
         #endregion
 

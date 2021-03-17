@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lightsaber_Builder_Game.Models
 {
-    public class Character
+    public class Character : ObservableObject
     {
         #region ENUMERABLES
 
@@ -37,31 +37,51 @@ namespace Lightsaber_Builder_Game.Models
         public int Id
         {
             get { return _id; }
-            set { _id = value; }
+            set 
+            {
+                _id = value;
+                OnPropertyChanged(nameof(Id));
+            }
         }
 
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            set 
+            {
+                _name = value;
+                OnPropertyChanged(nameof(Name));
+            }
         }
 
         public int LocationId
         {
             get { return _locationId; }
-            set { _locationId = value; }
+            set 
+            {
+                _locationId = value;
+                OnPropertyChanged(nameof(LocationId));
+            }
         }
 
         public int Age
         {
             get { return _age; }
-            set { _age = value; }
+            set 
+            {
+                _age = value;
+                OnPropertyChanged(nameof(Age));
+            }
         }
 
         public RaceType Race
         {
             get { return _race; }
-            set { _race = value; }
+            set 
+            {
+                _race = value;
+                OnPropertyChanged(nameof(Race));
+            }
         }
 
         #endregion

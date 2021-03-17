@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lightsaber_Builder_Game.Models
 {
-    public class Location
+    public class Location : ObservableObject
     {
         private int _id;
         private string _name;
         private string _description;
         private bool _accessible;
         private string _message;
-
+        private string _planetColor;
         public int ID
         {
             get { return _id; }
@@ -25,6 +25,17 @@ namespace Lightsaber_Builder_Game.Models
             get { return _name; }
             set { _name = value; }
         }
+
+        public string PlanetColor
+        {
+            get { return _planetColor; }
+            set 
+            { 
+                _planetColor = value;
+                OnPropertyChanged(nameof(PlanetColor));
+            }
+        }
+
         public string Description
         {
             get { return _description; }

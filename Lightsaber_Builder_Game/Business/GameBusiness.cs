@@ -11,7 +11,7 @@ namespace Lightsaber_Builder_Game.Business
 {
     public class GameBusiness
     {
-        bool _newPlayer = false;
+        bool _newPlayer = true;
 
         GameSessionViewModel _gameSessionViewModel;
         Player _player = new Player();
@@ -24,10 +24,6 @@ namespace Lightsaber_Builder_Game.Business
             InitializeDataSet();
             InstantiateAndShowView();
         }
-
-        /// <summary>
-        /// setup new or existing player
-        /// </summary>
         private void SetupPlayer()
         {
             if (_newPlayer)
@@ -44,19 +40,11 @@ namespace Lightsaber_Builder_Game.Business
                 _player = GameData.PlayerData();
             }
         }
-
-        /// <summary>
-        /// initialize data set
-        /// </summary>
         private void InitializeDataSet()
         {
             _player = GameData.PlayerData();
             _gamemap = GameData.GameMap();
         }
-
-        /// <summary>
-        /// create view model with data set
-        /// </summary>
         private void InstantiateAndShowView()
         {
             //
@@ -68,14 +56,6 @@ namespace Lightsaber_Builder_Game.Business
             gameSessionView.DataContext = _gameSessionViewModel;
 
             gameSessionView.Show();
-
-            //
-            // dialog window is initially hidden to mitigate issue with
-            // main window closing after dialog window closes
-            //
-            // commented out because the player setup window is disabled
-            //
-            //_playerSetupView.Close();
         }
     }
 }

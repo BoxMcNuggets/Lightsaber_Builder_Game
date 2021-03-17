@@ -28,19 +28,31 @@ namespace Lightsaber_Builder_Game.Models
         public int Lives
         {
             get { return _lives; }
-            set { _lives = value; }
+            set 
+            {
+                _lives = value;
+                OnPropertyChanged(nameof(Lives));
+            }
         }
 
         public ForceSide JobTitle
         {
             get { return _forceSide; }
-            set { _forceSide = value; }
+            set 
+            {
+                _forceSide = value;
+                OnPropertyChanged(nameof(JobTitle));
+            }
         }
 
         public int Health
         {
             get { return _health; }
-            set { _health = value; }
+            set 
+            {
+                _health = value;
+                OnPropertyChanged(nameof(Health));
+            }
         }
 
         #endregion
@@ -55,11 +67,6 @@ namespace Lightsaber_Builder_Game.Models
 
         #region METHODS
 
-        /// <summary>
-        /// override the default greeting in the Character class to include the job title
-        /// set the proper article based on the job title
-        /// </summary>
-        /// <returns>default greeting</returns>
         public override string DefaultGreeting()
         {
             string article = "a";
@@ -68,10 +75,10 @@ namespace Lightsaber_Builder_Game.Models
 
             if (vowels.Contains(_forceSide.ToString().Substring(0, 1)));
             {
-                article = "an";
+                article = "A";
             }
 
-            return $"Hello, my name is {_name} and I am {article} {_forceSide} for the Aion Project.";
+            return $"Hello, my name is {_name} and I am {article} {_forceSide}.";
         }
 
         #endregion

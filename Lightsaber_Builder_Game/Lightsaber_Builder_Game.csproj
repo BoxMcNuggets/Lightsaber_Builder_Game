@@ -75,9 +75,14 @@
     <Compile Include="Business\GameBusiness.cs" />
     <Compile Include="DataLayer\GameData.cs" />
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Credits.cs" />
+    <Compile Include="Models\GameItemModel.cs" />
+    <Compile Include="Models\HealthItems.cs" />
+    <Compile Include="Models\LightSaberParts.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Map.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Weapons.cs" />
     <Compile Include="ObservableObject.cs" />
     <Compile Include="Presentation\GameSessionView.xaml.cs">
       <DependentUpon>GameSessionView.xaml</DependentUpon>
@@ -117,6 +122,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Graphics\Stars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Mandalore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Coruscant.jpg" />
+    <Resource Include="Graphics\Dagobah.jpg" />
+    <Resource Include="Graphics\DeathStar.png" />
+    <Resource Include="Graphics\Hoth.png" />
+    <Resource Include="Graphics\mustafar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
